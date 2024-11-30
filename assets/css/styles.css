@@ -564,9 +564,6 @@ header .right {
     align-items: center;
 }
 
-.project:nth-child(2) {
-    flex-direction: row-reverse;
-}
 
 .project__img {
     position: relative;
