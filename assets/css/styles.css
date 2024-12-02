@@ -416,7 +416,7 @@ header .right {
 }
 
 .hero__img {
-    width: 120%;
+    width: 40%;
     display: flex;
     justify-content: center;
 }
