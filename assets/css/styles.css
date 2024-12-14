@@ -20,6 +20,40 @@
     box-sizing: border-box;
 }
 
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+  video::-moz-media-controls {
+    display: none !important;
+  }
+  video::-ms-media-controls {
+    display: none !important;
+  }
+
+/* Container para os vídeos */
+.video-container {
+    display: flex; /* Usando flexbox para colocar os vídeos lado a lado */
+    justify-content: space-between; /* Não há espaçamento entre os vídeos */
+    gap: 0; /* Garantir que não haja gap entre os vídeos */
+    width: 30%;
+  }
+
+  /* Estilo para cada vídeo dentro da container */
+  .video-container video {
+    flex: 1; /* Faz cada vídeo ocupar 1/3 da largura */
+    width: 70%;
+    height: auto; /* Manter a altura proporcional */
+    object-fit: cover; /* Ajustar o vídeo para preencher a área sem distorcer */
+  }
+
+
+
+  .video-container {
+    display: flex;
+    gap: 0px; /* Ajuste para controlar o espaçamento entre os vídeos */
+    justify-content:end;
+    margin: 0;
+  }
 
 
 a {
@@ -395,6 +429,9 @@ header .right {
     position: relative;
     z-index: 1;
     min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .hero__content {
@@ -416,6 +453,26 @@ header .right {
     font-weight: 300;
     margin-bottom: 1rem;
 }
+
+/* Ajustando os vídeos */
+.video-container {
+    display: flex;
+    gap: 10px; /* Espaço entre os vídeos */
+    justify-content: flex-start; /* Move os vídeos para a esquerda */
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    width: 50%; /* Ajusta a largura do container */
+}
+
+video {
+    width: 30%; /* O vídeo ocupa toda a largura da div pai */
+    max-width: 50%; /* Limita a largura de cada vídeo */
+    height: auto; /* Mantém a proporção do vídeo */
+    object-fit: cover; /* Ajusta o vídeo ao espaço disponível sem cortes */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+
 
 .hero__img {
     width: 40%;

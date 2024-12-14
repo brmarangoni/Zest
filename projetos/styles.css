@@ -552,6 +552,7 @@ header .right {
 }
 
 /* PROJETOS */
+
 .projects {
     display: flex;
     flex-direction: column;
