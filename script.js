@@ -1,3 +1,9 @@
+document.getElementById("searchInput").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        searchMachine(); // Chama a função de busca quando a tecla Enter é pressionada
+    }
+});
+
 function searchMachine() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
 
