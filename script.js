@@ -11,7 +11,7 @@ function searchMachine() {
     const machinesMap = [
         { keywords: ["3d", "3d multi abductor"], page: "../projetos/glutebuilder.html#3dMultiAbductor" },
         { keywords: ["box", "glutebuilderbox"], page: "../projetos/glutebuilder.html#GlutebuilderBox" },
-        { keywords: ["leg", "leg press"], page: "leg-press.html#leg-press" },
+        { keywords: ["GHD", "ghd"], page: "../equipamentos/boldpro.html#GHD" },
     ];
 
     // Procura a máquina correspondente
