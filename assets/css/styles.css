@@ -414,6 +414,67 @@ header .right {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Estilo para a lista de sugestões */
+#suggestionsList {
+    background-color: #ffffff; /* Cor de fundo mais clara */
+    border: 1px solid #ddd; /* Borda mais suave */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    width: 100%;
+    max-height: 250px; /* Altura ajustada */
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1000;
+    color: #333; /* Texto mais escuro para melhor contraste */
+    font-family: Arial, sans-serif; /* Fonte amigável */
+    font-size: 14px;
+}
+
+/* Estilo individual para cada sugestão */
+.suggestion-item {
+    padding: 10px 12px; /* Espaçamento interno */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para imagens das sugestões */
+.suggestion-item img {
+    width: 50px; /* Tamanho reduzido */
+    height: 50px; /* Mantém proporção */
+    border-radius: 5px; /* Bordas arredondadas nas imagens */
+    margin-right: 15px; /* Espaçamento com o texto */
+    object-fit: cover; /* Garante que a imagem fique proporcional */
+}
+
+/* Efeito ao passar o mouse por cima de uma sugestão */
+.suggestion-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+    color: #007bff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para item ativo */
+.suggestion-item.active {
+    background-color: #007bff; /* Cor de destaque */
+    color: #fff; /* Texto branco para contraste */
+}
+
+/* Barra de rolagem estilizada */
+#suggestionsList::-webkit-scrollbar {
+    width: 6px; /* Largura da barra */
+}
+
+#suggestionsList::-webkit-scrollbar-thumb {
+    background-color: #ddd; /* Cor da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+#suggestionsList::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb; /* Cor ao passar o mouse */
+}
+
+
 /* INICIO */
 #particles-js {
     position: absolute;
@@ -618,9 +679,10 @@ video {
 }
 
 .project {
-    display: flex;
-    gap: 10%;
-    align-items: center;
+    display: flex; /* Define layout em linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaçamento entre imagem e texto */
+    margin-bottom: 40px; /* Espaçamento entre projetos */
 }
 
 
