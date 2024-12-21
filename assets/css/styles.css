@@ -190,6 +190,73 @@ h6 {
 
 /* ESTILO GLOBAL */
 
+.search-container {
+    display: flex; /* Alinha os elementos horizontalmente */
+    justify-content: flex-start; /* Move o conjunto para a direita */
+    align-items: center;
+    position: relative; /* Necessário para posicionar a lista */
+    margin: 20px;
+}
+
+#searchInput {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+#searchInput:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#suggestionsList {
+    position: absolute; /* Posiciona a lista em relação à barra de pesquisa */
+    top: 100%; /* Move para baixo da barra */
+    left: 0;
+    width: 250px; /* Mantém o tamanho igual ao da barra */
+    border: 1px solid #ccc;
+    border-top: none; /* Remove a borda duplicada com a barra */
+    background-color: #fff;
+    max-height: 150px; /* Limita a altura máxima */
+    overflow-y: auto; /* Permite rolagem se necessário */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Garante que fique acima de outros elementos */
+    display: none; /* Esconde a lista inicialmente */
+}
+
+#suggestionsList li {
+    padding: 8px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#suggestionsList li:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 5px 13px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
