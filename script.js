@@ -149,3 +149,4 @@ function searchMachine() {
         alert("Máquina não encontrada. Tente outro nome.");
     }
 }
+
