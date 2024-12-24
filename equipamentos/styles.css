@@ -43,6 +43,7 @@ h5,
 h6 {
     font-family: var(--secondary-font);
     margin-bottom: 1rem;
+    
 }
 
 /* CLASSES PRÉC.CONFIG */
@@ -1038,6 +1039,17 @@ footer {
         display: flex;
         justify-content: center;
     }
+
+    .text-center {
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espaçamento opcional */
+}
 
     /* SOBRE */
     .features {

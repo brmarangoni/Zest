@@ -34,8 +34,8 @@
 .video-container {
     display: flex; /* Usando flexbox para colocar os vídeos lado a lado */
     justify-content: space-between; /* Não há espaçamento entre os vídeos */
-    gap: 0; /* Garantir que não haja gap entre os vídeos */
     width: 30%;
+    padding-left: 30px;
   }
 
   /* Estilo para cada vídeo dentro da container */
