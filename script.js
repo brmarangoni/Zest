@@ -61,8 +61,32 @@ function showSuggestions() {
         { name: "Pendulum Kick Back", keywords: ["pendulum", "pendulum kick back"], page: "../projetos/glutebuilder.html#PendulumKickBack", img: "projetos/img/pendulum.png" },
         { name: "Glutebuilder V2", keywords: ["glutebuilderv2", "glutebuilder v2"], page: "../projetos/glutebuilder.html#GlutebuilderV2", img: "projetos/img/v2.png" },
         { name: "Glutebuilder Box", keywords: ["box", "glutebuilderbox"], page: "../projetos/glutebuilder.html#GlutebuilderBox", img: "projetos/img/box.png" },
-        // NewEpic
         
+        // NewEpic
+
+        { name: "Scott", keywords: ["scott"], page: "../equipamentos/newepic.html#scott", img: "equipamentos/img/scott.png" },
+        { name: "Supino/Desenvolvimento Dual", keywords: ["supino desenvolvimento dual"], page: "../equipamentos/newepic.html#supinoDesenvolvimentoDual", img: "equipamentos/img/supino-e-desenvolvimennot.png" },
+        { name: "Abdominal", keywords: ["abdominal"], page: "../equipamentos/newepic.html#abdominal", img: "equipamentos/img/abdominal.png" },
+        { name: "Abdutor/Adutor Dual", keywords: ["abdutor adutor dual"], page: "../equipamentos/newepic.html#abdutorAdutorDual", img: "equipamentos/img/adutor-e-abdutor.png" },
+        { name: "Desenvolvimento", keywords: ["desenvolvimento"], page: "../equipamentos/newepic.html#desenvolvimento", img: "equipamentos/img/desenvolvimento.png" },
+        { name: "Extensor", keywords: ["extensor"], page: "../equipamentos/newepic.html#extensor", img: "equipamentos/img/extensor.png" },
+        { name: "Flexor Deitado", keywords: ["flexor deitado"], page: "../equipamentos/newepic.html#flexorDeitado", img: "equipamentos/img/flexor-deitado.png" },
+        { name: "Flexor Sentado", keywords: ["flexor sentado"], page: "../equipamentos/newepic.html#flexorSentado", img: "equipamentos/img/flexora-sentada.png" },
+        { name: "Glúteo", keywords: ["gluteo"], page: "../equipamentos/newepic.html#gluteo", img: "equipamentos/img/glúteo.png" },
+        { name: "Graviton", keywords: ["graviton"], page: "../equipamentos/newepic.html#graviton", img: "equipamentos/img/graviton.png" },
+        { name: "Leg Press Horizontal", keywords: ["leg press horizontal"], page: "../equipamentos/newepic.html#legPressHorizontal", img: "equipamentos/img/leg-press-horizontal.png" },
+        { name: "Lombar", keywords: ["lombar"], page: "../equipamentos/newepic.html#lombar", img: "equipamentos/img/lombar.png" },
+        { name: "Panturrilha", keywords: ["panturrilha"], page: "../equipamentos/newepic.html#panturrilha", img: "equipamentos/img/panturrilha.png" },
+        { name: "Peck Deck/Dorsal Dual", keywords: ["peck deck dorsal dual"], page: "../equipamentos/newepic.html#peckDeckDorsalDual", img: "equipamentos/img/peck-deck-dorsal.png" },
+        { name: "Pull Down", keywords: ["pull down"], page: "../equipamentos/newepic.html#pullDown", img: "equipamentos/img/pull-down.png" },
+        { name: "Pulley", keywords: ["pulley"], page: "../equipamentos/newepic.html#pulley", img: "equipamentos/img/pulley.png" },
+        { name: "Pulley/Remada Dual", keywords: ["pulley remada dual"], page: "../equipamentos/newepic.html#pulleyRemadaDual", img: "equipamentos/img/pulley e remada.png" },
+        { name: "Remada", keywords: ["remada"], page: "../equipamentos/newepic.html#remada", img: "equipamentos/img/remada.png" },
+        { name: "Remada Baixa", keywords: ["remada baixa"], page: "../equipamentos/newepic.html#remadaBaixa", img: "equipamentos/img/remada-baixa.png" },
+        { name: "Supino", keywords: ["supino"], page: "../equipamentos/newepic.html#supino", img: "equipamentos/img/supinoo.png" },
+        { name: "Tríceps Francês", keywords: ["triceps frances"], page: "../equipamentos/newepic.html#tricepsFrances", img: "equipamentos/img/tríceps-frances.png" },
+        { name: "Tríceps Pressão", keywords: ["triceps pressao"], page: "../equipamentos/newepic.html#tricepsPressao", img: "equipamentos/img/tríceps.png" },
+        { name: "Voador", keywords: ["voador"], page: "../equipamentos/newepic.html#voador", img: "equipamentos/img/voador.png" },
         
         // Bravo
         { name: "Abdominal Crunch", keywords: ["abdominal crunch"], page: "../equipamentos/bravo.html#abdominalCrunch", img: "equipamentos/img/abdominal crunch.png" },
@@ -97,8 +121,22 @@ function showSuggestions() {
         { name: "Supino Reto Articulado", keywords: ["supino reto articulado"], page: "../equipamentos/bravo.html#supinoRetoArticulado", img: "equipamentos/img/supino-reto-articulado.png" },
         { name: "Supino Wide Chest Articulado", keywords: ["supino wide chest articulado"], page: "../equipamentos/bravo.html#supinoWideChestArticulado", img: "equipamentos/img/supino-wide-chest-articulado.png" },
         { name: "V-Squat", keywords: ["vsquat", "v-squat"], page: "../equipamentos/bravo.html#vSquat", img: "equipamentos/img/v-squat.png" },
-        { name: "Wide Pull Down Articulado", keywords: ["wide pull down articulado"], page: "../equipamentos/bravo.html#widePullDownArticulado", img: "equipamentos/img/wide-pull-down-articulado.png" }
-        //
+        { name: "Wide Pull Down Articulado", keywords: ["wide pull down articulado"], page: "../equipamentos/bravo.html#widePullDownArticulado", img: "equipamentos/img/wide-pull-down-articulado.png" },
+        
+        //Evo
+        { name: "Bíceps Articulado", keywords: ["bíceps", "articulado", "braços"], page: "../equipamentos/evo.html#bicepsArticulado", img: "equipamentos/img/bíceps-articulado-evo.png" },
+        { name: "Desenvolvimento Articulado", keywords: ["desenvolvimento", "articulado", "ombros"], page: "../equipamentos/evo.html#desenvolvimentoArticulado", img: "equipamentos/img/desenvolvimento-articulado-evo.png" },
+        { name: "Extensor Articulado", keywords: ["extensor", "articulado", "pernas"], page: "../equipamentos/evo.html#extensorArticulado", img: "equipamentos/img/extensor-articulado-evo.png" },
+        { name: "Flexor Unilateral Articulado", keywords: ["flexor", "unilateral", "articulado", "pernas"], page: "../equipamentos/evo.html#flexorUnilateralArticulado", img: "equipamentos/img/flexor-unilateral-articulado.png" },
+        { name: "Glúteo Articulado", keywords: ["glúteo", "articulado", "pernas"], page: "../equipamentos/evo.html#gluteoArticulado", img: "equipamentos/img/glúteo_articulado.png" },
+        { name: "Hack Articulado", keywords: ["hack", "articulado", "pernas"], page: "../equipamentos/evo.html#hackArticulado", img: "equipamentos/img/hack-articulado.png" },
+        { name: "Leg Press Articulado", keywords: ["leg press", "articulado", "pernas"], page: "../equipamentos/evo.html#legPressArticulado", img: "equipamentos/img/leg-press-articulado-evo.png" },
+        { name: "Remada Articulada", keywords: ["remada", "articulada", "costas"], page: "../equipamentos/evo.html#remadaArticulada", img: "equipamentos/img/remada-articulada-evo.png" },
+        { name: "Remada Inferior Articulada", keywords: ["remada inferior", "articulada", "costas"], page: "../equipamentos/evo.html#remadaInferiorArticulada", img: "equipamentos/img/remada-inferior (1).png" },
+        { name: "Supino Declinado Articulado", keywords: ["supino", "declinado", "articulado", "peitoral"], page: "../equipamentos/evo.html#supinoDeclinadoArticulado", img: "equipamentos/img/supino_declinado-articulado.png" },
+        { name: "Supino Reto Articulado", keywords: ["supino", "reto", "articulado", "peitoral"], page: "../equipamentos/evo.html#supinoRetoArticulado", img: "equipamentos/img/supino-reto-articulado-evo.png" },
+        { name: "Tríceps Pressão Articulado", keywords: ["tríceps", "pressão", "articulado", "braços"], page: "../equipamentos/evo.html#tricepsPressaoArticulado", img: "equipamentos/img/triceps-pressao-articulado.png" },
+
 
     ]
         
