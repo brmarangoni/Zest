@@ -3,6 +3,1461 @@
 
 /* VARIAVEIS */
 :root {
+  --primary-color: #090cc6;
+  --color-grey: #999999;
+  --color-black: #252525;
+  --color-white: #fff;
+  --color-shadow-white: rgba (0, 0, 0, 0.1);
+  --color-shadow-white: rgba (255, 255, 255, 0.1);
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Overpass", sans-serif;
+}
+
+/* RESET PADRÃO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* botão carrinho */
+.add-to-cart-btn {
+  background-color: #007BFF; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3; /* Verde mais escuro */
+}
+
+.add-to-cart-btn:active {
+  background-color: #0056b3;
+}
+
+/* menu lateral */
+/* Botão para abrir o menu */
+.open-menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Botão no lado direito */
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  display: flex;
+}
+
+.open-menu-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Menu lateral */
+.icon-menu {
+  max-width: 80px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Inicia fora da tela à direita */
+  width: 300px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra do lado esquerdo */
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  padding: 20px;
+}
+
+.side-menu.open {
+  right: 0; /* Exibe o menu */
+  z-index: 1000;
+}
+
+/* Botão para fechar o menu */
+.close-menu-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.close-menu-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+video::-moz-media-controls {
+  display: none !important;
+}
+video::-ms-media-controls {
+  display: none !important;
+}
+
+/* Container para os vídeos */
+.video-container {
+  display: flex; /* Usando flexbox para colocar os vídeos lado a lado */
+  justify-content: space-between; /* Não há espaçamento entre os vídeos */
+  width: 30%;
+  padding-left: 30px;
+}
+
+/* Estilo para cada vídeo dentro da container */
+.video-container video {
+  flex: 1; /* Faz cada vídeo ocupar 1/3 da largura */
+  width: 70%;
+  height: auto; /* Manter a altura proporcional */
+  object-fit: cover; /* Ajustar o vídeo para preencher a área sem distorcer */
+}
+
+.video-container {
+  display: flex;
+  gap: 0px; /* Ajuste para controlar o espaçamento entre os vídeos */
+  justify-content: end;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--secondary-font);
+  margin-bottom: 1rem;
+}
+
+/* CLASSES PRÉC.CONFIG */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.btn {
+  display: inline-block;
+  max-width: max-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #262075;
+}
+
+.btn-secondary {
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+
+.section-subheading {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: 3rem;
+  max-width: 600px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.section-heading.left {
+  margin-right: auto;
+}
+
+.section-heading.right {
+  margin-left: auto;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-white);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #262075;
+}
+
+/* ESTILO GLOBAL */
+
+.search-container {
+  display: flex; /* Alinha os elementos horizontalmente */
+  justify-content: start; /* Move o conjunto para a direita */
+  align-items: normal;
+  position: relative; /* Necessário para posicionar a lista */
+  gap: 10px;
+}
+
+#searchInput {
+  padding: 10px; /* Espaçamento interno do campo */
+  font-size: 16px; /* Tamanho da fonte consistente */
+  border: 1px solid #ccc; /* Bordas simples */
+  border-radius: 5px; /* Cantos arredondados */
+  height: 40px; /* Altura fixa */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho total */
+}
+
+#searchInput:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#suggestionsList {
+  position: absolute; /* Posiciona a lista em relação à barra de pesquisa */
+  top: 100%; /* Move para baixo da barra */
+  left: 0;
+  width: 250px; /* Mantém o tamanho igual ao da barra */
+  border: 1px solid #ccc;
+  border-top: none; /* Remove a borda duplicada com a barra */
+  background-color: #fff;
+  max-height: 150px; /* Limita a altura máxima */
+  overflow-y: auto; /* Permite rolagem se necessário */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Garante que fique acima de outros elementos */
+  display: none; /* Esconde a lista inicialmente */
+}
+
+#suggestionsList li {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#suggestionsList li:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 0 16px; /* Espaçamento horizontal fixo */
+  font-size: 16px; /* Consistência no tamanho da fonte */
+  height: 40px; /* Mesma altura do campo de texto */
+  line-height: 40px; /* Centraliza o texto verticalmente */
+  background-color: #007BFF; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor interativo */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+section {
+  position: relative;
+  padding-top: 8rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.color-toggle-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-toggle-button i {
+  color: inherit;
+}
+
+/* Estilos para o botão do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.whatsapp-button a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #262075;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 0 10px #262075;
+  color: var(--color-white);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Estilo para o botão "Voltar ao Topo" */
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  display: none;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER */
+header {
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+header.sticky {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.4);
+}
+
+.header__logo a {
+  outline: none;
+  border: none;
+}
+
+.header__logo img {
+  width: 200px;
+  position: relative;
+  left: -65px;
+}
+
+.header__menu {
+  gap: 1.2rem;
+  list-style-type: none;
+}
+
+.header__menu li {
+  position: relative;
+}
+
+/* Estilos para o dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo dos itens do dropdown */
+.dropdown-content li a {
+  padding: 10px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+/* Exibir o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Estilo da lista de opções no drop-down */
+.header-options {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Estilo dos links das opções */
+.header-options a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mudar cor de fundo quando o mouse passa sobre uma opção */
+.header-options a:hover {
+  background-color: #ddd;
+}
+
+/* Exibir o drop-down ao passar o mouse sobre o botão */
+.header:hover .menu-options {
+  display: block;
+}
+
+.header__menu li a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header__menu li a:hover {
+  color: var(--primary-color);
+}
+
+.header__menu li a.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+header .right {
+  gap: 1rem;
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: var(--color-black);
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Estilo para a lista de sugestões */
+#suggestionsList {
+  background-color: #ffffff; /* Cor de fundo mais clara */
+  border: 1px solid #ddd; /* Borda mais suave */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  width: 100%;
+  max-height: 250px; /* Altura ajustada */
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1000;
+  color: #333; /* Texto mais escuro para melhor contraste */
+  font-family: Arial, sans-serif; /* Fonte amigável */
+  font-size: 14px;
+}
+
+/* Estilo individual para cada sugestão */
+.suggestion-item {
+  padding: 10px 12px; /* Espaçamento interno */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para imagens das sugestões */
+.suggestion-item img {
+  width: 50px; /* Tamanho reduzido */
+  height: 50px; /* Mantém proporção */
+  border-radius: 5px; /* Bordas arredondadas nas imagens */
+  margin-right: 15px; /* Espaçamento com o texto */
+  object-fit: cover; /* Garante que a imagem fique proporcional */
+}
+
+/* Efeito ao passar o mouse por cima de uma sugestão */
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  color: #007bff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para item ativo */
+.suggestion-item.active {
+  background-color: #007bff; /* Cor de destaque */
+  color: #fff; /* Texto branco para contraste */
+}
+
+/* Barra de rolagem estilizada */
+#suggestionsList::-webkit-scrollbar {
+  width: 6px; /* Largura da barra */
+}
+
+#suggestionsList::-webkit-scrollbar-thumb {
+  background-color: #ddd; /* Cor da barra */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+#suggestionsList::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb; /* Cor ao passar o mouse */
+}
+
+/* INICIO */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero__content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero__content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* Ajustando os vídeos */
+.video-container {
+  display: flex;
+  gap: 10px; /* Espaço entre os vídeos */
+  justify-content: flex-start; /* Move os vídeos para a esquerda */
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  width: 50%; /* Ajusta a largura do container */
+}
+
+video {
+  width: 30%; /* O vídeo ocupa toda a largura da div pai */
+  max-width: 50%; /* Limita a largura de cada vídeo */
+  height: auto; /* Mantém a proporção do vídeo */
+  object-fit: cover; /* Ajusta o vídeo ao espaço disponível sem cortes */
+  border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+
+.hero__img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+/* SOBRE */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feature {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.feature__counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.feature__text {
+  font-size: 0.9rem;
+}
+
+.about__details {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.about__details-content {
+  width: 50%;
+}
+
+.about__details-content h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about__details-content p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.about__details-content .btn {
+  margin-top: 1rem;
+}
+
+.about__details-img {
+  width: 50%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SERVIÇOS */
+#services .section-subheading,
+#services .section-heading {
+  text-align: right;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.service {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.4);
+  background-color: var(--color-white);
+}
+
+.service__icon img {
+  width: 50px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-projeto {
+  width: 400px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+.services__title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.service__text {
+  font-size: 0.9rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.service_service {
+  text-align: center;
+}
+
+/* PROJETOS */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 5rem;
+  z-index: auto;
+}
+
+.project {
+  display: flex; /* Define layout em linha */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  margin-bottom: 40px; /* Espaçamento entre projetos */
+}
+
+.project__img {
+  position: relative;
+  min-width: 35%;
+  max-width: 550px;
+}
+.project__imgg {
+  order: 2;
+  min-width: 35%;
+  max-width: 550px;
+}
+
+.project__category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.project__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.project__text {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btn.btn-secondary {
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: color 0.3s;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}
+
+/* PROFISSIONAL */
+.members {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.member__img {
+  flex: 0 0 40%;
+  margin-bottom: 1rem;
+}
+
+.member__img img {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.member__content {
+  flex: 1;
+  text-align: left;
+}
+
+.member__content h1 {
+  margin-bottom: 0.3rem;
+}
+
+.member__content p {
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.member__content span {
+  color: var(--primary-color);
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.member__skills {
+  margin-top: 1rem;
+}
+
+.skills-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.skills-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-black);
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.skills-list li:hover::before {
+  background-color: #262075;
+}
+
+/* DEPOIMENTOS */
+#testimonials {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+#testimonials .section-subheading {
+  margin-bottom: 2rem;
+}
+
+.testimonials-wrapper {
+  position: relative;
+  width: 70%;
+}
+
+.quotes {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  font-size: 5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.testimonial__title {
+  font-size: 2rem;
+  padding-left: 6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.testimonial__text {
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.testimonials_img img {
+  max-height: 500px;
+}
+
+.testimonial__author {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial__author h3 {
+  margin: 0;
+}
+
+.testimonial__author p {
+  color: var(--color-grey);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.testimonial__author::before {
+  content: "";
+  width: 15px;
+  transform: translateY(-70%);
+  border-bottom: 1px solid var(--color-black);
+}
+
+.testimonial-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.testimonial-navigation span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  transition: all 0.3s;
+}
+
+.testimonial-navigation span.active {
+  width: 30px;
+}
+
+/* CONTATO */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza na horizontal */
+  gap: 5rem;
+  min-height: 50vh; /* Garante que ocupe toda a tela */
+}
+
+
+.contact__form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.4);
+}
+
+.contact__form textarea {
+  resize: vertical;
+}
+
+.contact__details {
+  width: 50%;
+}
+
+.contact__details .text {
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  margin-bottom: 2rem;
+}
+
+.contact__details .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__details .detail {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.detail__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 0.8rem;
+  background: var(--primary-color);
+}
+
+.detail__content h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+.detail__content p {
+  color: var(--color-grey);
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+  padding: 2rem 0;
+}
+
+.footer__content {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.footer__logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.footer__text {
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  margin-bottom: 1rem;
+}
+
+.footer__newletter {
+  position: relative;
+}
+
+.footer__newletter input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.4);
+}
+
+.footer__newletter .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-grey);
+}
+
+.footer__menu-list li a:hover {
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.footer__bottom-icons a:hover {
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--color-grey);
+  margin-top: 3rem;
+}
+
+.footer__bottom-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.instagram {
+  color: #e4405f;
+}
+
+.facebook {
+  color: #1877f2;
+}
+
+.github {
+  color: #6e6e6e;
+}
+
+.linkedin {
+  color: #0a66c2;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  /* GLOBAL */
+  .container {
+    padding: 0 1rem;
+  }
+
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .section-heading {
+    font-size: 1.55rem;
+  }
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+  }
+
+  /* HEADER */
+
+  #menu__bar {
+    visibility: visible;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+
+  .header__menu.show {
+    transform: translateX(0);
+  }
+
+  .header__menu li {
+    margin: 1rem 0;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 99;
+  }
+
+  /* INICIO */
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero__content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__content h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero__content p {
+    font-size: 16px;
+  }
+
+  .hero__content .btn {
+    margin: 0 auto;
+  }
+
+  .hero__img {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* SOBRE */
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    padding: 2rem;
+  }
+
+  .about__details {
+    flex-direction: column;
+  }
+
+  .about__details-content,
+  .about__details-img {
+    width: 100%;
+  }
+
+  /* PROJETOS */
+  .project {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .project__img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .project__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  /* EQUIPE */
+  .members {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member__img {
+    flex: 0 0 auto;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .member__content {
+    text-align: left;
+  }
+
+  .member__content h1,
+  .member__content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skills-list {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .skills-list ul {
+    margin-bottom: 0.5rem;
+  }
+
+  /* DEPOIMENTOS */
+  .testimonials__img {
+    display: none;
+  }
+
+  .testimonials-wrapper {
+    width: 100%;
+  }
+
+  .testimonial__title {
+    font-size: 1.5rem;
+  }
+
+  /* CONTATO */
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact__form,
+  .contact__details {
+    width: 100%;
+  }
+
+  .contact h1 {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+  .footer__content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#menu__bar {
+  visibility: hidden;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* VARIAVEIS */
+:root {
     --primary-color: #090cc6;
     --color-grey: #999999;
     --color-black: #252525;
@@ -20,40 +1475,6 @@
     box-sizing: border-box;
 }
 
-  video::-webkit-media-controls {
-    display: none !important;
-  }
-  video::-moz-media-controls {
-    display: none !important;
-  }
-  video::-ms-media-controls {
-    display: none !important;
-  }
-
-/* Container para os vídeos */
-.video-container {
-    display: flex; /* Usando flexbox para colocar os vídeos lado a lado */
-    justify-content: space-between; /* Não há espaçamento entre os vídeos */
-    width: 30%;
-    padding-left: 30px;
-  }
-
-  /* Estilo para cada vídeo dentro da container */
-  .video-container video {
-    flex: 1; /* Faz cada vídeo ocupar 1/3 da largura */
-    width: 70%;
-    height: auto; /* Manter a altura proporcional */
-    object-fit: cover; /* Ajustar o vídeo para preencher a área sem distorcer */
-  }
-
-
-
-  .video-container {
-    display: flex;
-    gap: 0px; /* Ajuste para controlar o espaçamento entre os vídeos */
-    justify-content:end;
-    margin: 0;
-  }
 
 
 a {
@@ -190,73 +1611,6 @@ h6 {
 
 /* ESTILO GLOBAL */
 
-.search-container {
-    display: flex; /* Alinha os elementos horizontalmente */
-    justify-content: flex-start; /* Move o conjunto para a direita */
-    align-items: center;
-    position: relative; /* Necessário para posicionar a lista */
-    margin: 20px;
-}
-
-#searchInput {
-    padding: 5px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 250px;
-    box-sizing: border-box;
-    margin-right: 10px;
-}
-
-#searchInput:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-#suggestionsList {
-    position: absolute; /* Posiciona a lista em relação à barra de pesquisa */
-    top: 100%; /* Move para baixo da barra */
-    left: 0;
-    width: 250px; /* Mantém o tamanho igual ao da barra */
-    border: 1px solid #ccc;
-    border-top: none; /* Remove a borda duplicada com a barra */
-    background-color: #fff;
-    max-height: 150px; /* Limita a altura máxima */
-    overflow-y: auto; /* Permite rolagem se necessário */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Garante que fique acima de outros elementos */
-    display: none; /* Esconde a lista inicialmente */
-}
-
-#suggestionsList li {
-    padding: 8px 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#suggestionsList li:hover {
-    background-color: #f0f0f0;
-}
-
-button {
-    padding: 5px 13px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -304,7 +1658,7 @@ section {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .whatsapp-button a {
@@ -481,67 +1835,6 @@ header .right {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Estilo para a lista de sugestões */
-#suggestionsList {
-    background-color: #ffffff; /* Cor de fundo mais clara */
-    border: 1px solid #ddd; /* Borda mais suave */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    width: 100%;
-    max-height: 250px; /* Altura ajustada */
-    overflow-y: auto;
-    position: absolute;
-    z-index: 1000;
-    color: #333; /* Texto mais escuro para melhor contraste */
-    font-family: Arial, sans-serif; /* Fonte amigável */
-    font-size: 14px;
-}
-
-/* Estilo individual para cada sugestão */
-.suggestion-item {
-    padding: 10px 12px; /* Espaçamento interno */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Estilo para imagens das sugestões */
-.suggestion-item img {
-    width: 50px; /* Tamanho reduzido */
-    height: 50px; /* Mantém proporção */
-    border-radius: 5px; /* Bordas arredondadas nas imagens */
-    margin-right: 15px; /* Espaçamento com o texto */
-    object-fit: cover; /* Garante que a imagem fique proporcional */
-}
-
-/* Efeito ao passar o mouse por cima de uma sugestão */
-.suggestion-item:hover {
-    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
-    color: #007bff; /* Cor do texto ao passar o mouse */
-}
-
-/* Estilo para item ativo */
-.suggestion-item.active {
-    background-color: #007bff; /* Cor de destaque */
-    color: #fff; /* Texto branco para contraste */
-}
-
-/* Barra de rolagem estilizada */
-#suggestionsList::-webkit-scrollbar {
-    width: 6px; /* Largura da barra */
-}
-
-#suggestionsList::-webkit-scrollbar-thumb {
-    background-color: #ddd; /* Cor da barra */
-    border-radius: 10px; /* Bordas arredondadas */
-}
-
-#suggestionsList::-webkit-scrollbar-thumb:hover {
-    background-color: #bbb; /* Cor ao passar o mouse */
-}
-
-
 /* INICIO */
 #particles-js {
     position: absolute;
@@ -557,9 +1850,6 @@ header .right {
     position: relative;
     z-index: 1;
     min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .hero__content {
@@ -581,26 +1871,6 @@ header .right {
     font-weight: 300;
     margin-bottom: 1rem;
 }
-
-/* Ajustando os vídeos */
-.video-container {
-    display: flex;
-    gap: 10px; /* Espaço entre os vídeos */
-    justify-content: flex-start; /* Move os vídeos para a esquerda */
-    align-items: center;
-    margin: 0;
-    padding: 10px;
-    width: 50%; /* Ajusta a largura do container */
-}
-
-video {
-    width: 30%; /* O vídeo ocupa toda a largura da div pai */
-    max-width: 50%; /* Limita a largura de cada vídeo */
-    height: auto; /* Mantém a proporção do vídeo */
-    object-fit: cover; /* Ajusta o vídeo ao espaço disponível sem cortes */
-    border-radius: 8px; /* Bordas arredondadas (opcional) */
-}
-
 
 .hero__img {
     width: 40%;
@@ -737,6 +2007,7 @@ video {
 }
 
 /* PROJETOS */
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -746,43 +2017,41 @@ video {
 }
 
 .project {
-    display: flex; /* Define layout em linha */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 20px; /* Espaçamento entre imagem e texto */
-    margin-bottom: 40px; /* Espaçamento entre projetos */
-}
-
-
-.project__img {
-    position: relative;
-    min-width: 35%;
-    max-width: 550px;
-}
-.project__imgg {
-    order: 2;
-    min-width: 35%;
-    max-width: 550px;
-}
-
-.project__category {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.project__title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.project__text {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
+    display: flex;
+    align-items: center; /* Alinha a imagem e o conteúdo verticalmente */
+    margin-bottom: 30px; /* Espaçamento entre os projetos */
+  }
+  
+  .project .machine {
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    margin-right: 30px; /* Distância entre a imagem e o texto */
+  }
+  
+  .project img {
+    width: 350px; /* Largura maior para a imagem */
+    height: auto; /* A altura será proporcional à largura */
+    object-fit: contain; /* A imagem não será distorcida */
+  }
+  
+  .project__content {
+    display: flex;
+    flex-direction: column; /* Título e descrição ficam em coluna */
+    justify-content: center; /* Alinha o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    max-width: 600px; /* Limita a largura do conteúdo */
+    text-align: center; /* Centraliza o texto dentro do conteúdo */
+  }
+  .project__title {
+    font-size: 40px; /* Tamanho grande para o título */
+    margin: 0; /* Remove margem extra */
+    font-weight: bold; /* Deixa o título em negrito */
+  }
+  
+  .project__text {
+    font-size: 18px; /* Tamanho grande para o texto */
+    margin-top: 10px; /* Espaçamento entre título e texto */
+  }
+  
 
 .btn.btn-secondary {
     font-size: 0.8rem;

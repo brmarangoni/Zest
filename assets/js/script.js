@@ -50,3 +50,15 @@ function changeActiveLink() {
 }
 
 document.addEventListener("DOMContentLoaded", changeActiveLink);
+
+function toggleMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.toggle('open');
+  }
+
+  // Manipulação do formulário
+  document.getElementById('budgetForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    alert('Orçamento finalizado com sucesso!');
+    toggleMenu(); // Fecha o menu após finalizar
+  });
